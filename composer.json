@@ -9,8 +9,11 @@
 	"type": "project",
 	"require": {
 		"php": ">=7.0.0",
+		"alexusmai/yandex-metrika": "^1.1",
+		"arrilot/laravel-widgets": "^3.13",
 		"fideloper/proxy": "~3.3",
 		"fzaninotto/faker": "^1.7",
+		"jeroennoten/laravel-adminlte": "^1.27",
 		"laravel/framework": "5.5.*",
 		"laravel/tinker": "~1.0"
 	},
