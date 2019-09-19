@@ -1892,7 +1892,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/softlabnet/weather",
-                "reference": "f21145aee487f5c66fa2bfacf55953feccf84ff1"
+                "reference": "cac1e7d0e9ab31bb2b420bc79dd320bb6f8e69ea"
             },
             "require": {
                 "guzzlehttp/guzzle": "^6.2",

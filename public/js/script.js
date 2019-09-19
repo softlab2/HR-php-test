@@ -1,8 +1,10 @@
 jQuery(document).ready(function ($) {
+    //Подключение таймера к аяксовым виджетам погоды
     $('.widget_weather_ajax').each(function(index, widget){
         getWeather(widget);
     });
 
+    // Функция подключения таймера
     function getWeather( widget ){
         var $widget = $(widget);
         var $content = $widget.find('.content');
@@ -26,11 +28,12 @@ jQuery(document).ready(function ($) {
 
     }
 
+    // Функция запроса данных через апи сайта
     function reloadWeather( $content, config ){
         var {point} = config;
 
-        $content.html('');
-        $content.addClass('fa fa-spinner fa-spin');
+        // Отправка запроса через сайт
+        // Виджет получает данные через апи  сайта, за которым скрыто обращение к произвольному сервису
         $.ajax({
             url: '/api/weather/get',
             method: 'GET',
@@ -43,7 +46,6 @@ jQuery(document).ready(function ($) {
                 if(data.status == -1){
                     //
                 }else{
-                    $content.removeClass('fa fa-spinner fa-spin');            
                     if(data.status == 1){
                         $content.html(data.data.temp);
                     }else{
@@ -58,6 +60,7 @@ jQuery(document).ready(function ($) {
 
     }
 });
+
 
 function editLinkFormatter( value ){
     return "<a href='/orders/" + value + "/edit'>" + value + "</a>";
